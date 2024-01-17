@@ -1,109 +1,108 @@
 footer {
-    padding: 2vmax;
-    background-color: rgb(34, 33, 33);
-    width: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    align-self: flex-end;
+  padding: 2vmax;
+  background-color: rgb(34, 33, 33);
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
 }
 
 .leftFooter {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .leftFooter h4 {
-    font-family: "Roboto";
-    font-size: 1.5rem;
-    text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .leftFooter img {
-    width: 10vmax;
-    margin: 1vmax;
-    cursor: pointer;
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
 }
 
 .midFooter {
-    width: 40%;
-    text-align: center;
+  width: 40%;
+  text-align: center;
 }
 
 .midFooter h1 {
-    font-size: 2.5rem;
-    font-family: "Roboto";
-    color: #eb4034;
-    margin-bottom: 1rem;
+  font-size: 5.2rem;
+  font-family: "Roboto";
+  color: #ab6431;
+  margin-bottom: 1rem;
 }
 
 .midFooter p {
-    max-width: 60%;
-    margin: 1vmax auto;
-    font-size: 1rem;
+  max-width: 60%;
+  margin: 1vmax auto;
+  font-size: 1rem;
 }
 
 .rightFooter {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rightFooter h4 {
-    font-family: "Roboto";
-    font-size: 1.2rem;
-    text-decoration: underline;
+  font-family: "Roboto";
+  font-size: 1.8rem;
+  text-decoration: underline;
 }
 
 .rightFooter a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    margin: .5vmax;
-    transition: all .5s;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  margin: 0.5vmax;
+  transition: all 0.5s;
 }
 
 .rightFooter a:hover {
-    color: #eb4034;
+  color: #ab6431;
 }
 
-
 @media screen and (max-width: 1180px) {
-    .leftFooter h4 {
-        font-size: 1rem;
-    }
+  .leftFooter h4 {
+    font-size: 1rem;
+  }
 
-    .midFooter h1 {
-        font-size: 2rem;
-    }
+  .midFooter h1 {
+    font-size: 2rem;
+  }
 
-    .midFooter p {
-     font-size: .9rem;
-    }
+  .midFooter p {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .leftFooter h4 {
-        font-size: .8rem;
-    }
+  .leftFooter h4 {
+    font-size: 0.8rem;
+  }
 
-    .midFooter h1 {
-        font-size: 1.6rem;
-    }
+  .midFooter h1 {
+    font-size: 1.6rem;
+  }
 
-    .midFooter p {
-        font-size: .8rem;
-       }
+  .midFooter p {
+    font-size: 0.8rem;
+  }
 
-    .rightFooter h4 {
-        font-size: 1.1rem;
-    }
+  .rightFooter h4 {
+    font-size: 1.1rem;
+  }
 
-    .rightFooter a {
-        font-size: .9rem;
-    }
+  .rightFooter a {
+    font-size: 0.9rem;
+  }
 }
