@@ -1,8 +1,15 @@
 import "./Footer.css";
 import playStore from "../../../images/playstore.png";
 import appStore from "../../../images/Appstore.png";
+import { Facebook, Twitter, WhatsApp, Instagram } from "@mui/icons-material";
 
 const Footer = () => {
+  const phoneNumber = "+972524501974";
+  const message = encodeURIComponent(
+    "Hi, I saw a product on your website that I'm interested in. Can you provide more information?"
+  );
+
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
   return (
     <footer id="footer">
       <div className="leftFooter">
@@ -17,9 +24,20 @@ const Footer = () => {
       </div>
       <div className="rightFooter">
         <h4>Follow Us</h4>
-        <a href="https://instagram.com/">Instagram</a>
-        <a href="https://youtube.com/">Youtube</a>
-        <a href="https://facebook.com/">Facebook</a>
+        <div className="footer-icons">
+          <a href="#" target="_blank">
+            <Facebook fontSize="large" />
+          </a>
+          <a href="#" target="_blank">
+            <Twitter fontSize="large" />
+          </a>
+          <a href={whatsappLink} target="_blank">
+            <WhatsApp fontSize="large" />
+          </a>
+          <a href="#" target="_blank">
+            <Instagram fontSize="large" />
+          </a>
+        </div>
       </div>
     </footer>
   );

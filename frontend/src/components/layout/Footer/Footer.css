@@ -1,11 +1,14 @@
 footer {
   padding: 2vmax;
-  background-color: rgb(34, 33, 33);
+  background-image: url("https://res.cloudinary.com/djcbwaqfj/image/upload/v1705606068/tnt9jw0v3colm3e9nsvc.jpg");
+  background-size: cover;
+  opacity: 0.8;
   width: 100%;
   color: white;
   display: flex;
   align-items: center;
   align-self: flex-end;
+  border-radius: 50% 90% 0 0;
 }
 
 .leftFooter {
@@ -35,7 +38,7 @@ footer {
 .midFooter h1 {
   font-size: 5.2rem;
   font-family: "Roboto";
-  color: #ab6431;
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -105,4 +108,7 @@ footer {
   .rightFooter a {
     font-size: 0.9rem;
   }
+}
+.footer-icons {
+  padding-top: 3rem;
 }

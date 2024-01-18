@@ -9,7 +9,6 @@ import { clearErrorAction } from "../../redux/actions/appAction";
 import ProductCard from "../Products/ProductCard";
 import { toast } from "react-toastify"; // Import toast from react-toastify
 import "react-toastify/dist/ReactToastify.css"; // Import the styles
-
 const Home = () => {
   const products = useSelector((state) => state.productState.products);
   const isLoading = useSelector((state) => state.appState.isLoading);
@@ -36,6 +35,13 @@ const Home = () => {
             Scroll <CgMouse />
           </button>
         </a>
+      </div>
+      <div className="repiterDiv">
+        {/* <img
+          src=""
+          alt="repiter"
+          className="repiter"
+        /> */}
       </div>
 
       <h2 className="homeHeading">Feature Products</h2>

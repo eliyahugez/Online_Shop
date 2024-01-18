@@ -42,13 +42,13 @@
   content: "";
   max-width: 100vw;
   height: 100vmin;
-  background-color: gray;
+  background-image: url("https://res.cloudinary.com/djcbwaqfj/image/upload/v1705605369/pffoou9djrtk3uf5qnb7.jpg");
   position: absolute;
   top: 0%;
   left: 0%;
   min-width: 100%;
   clip-path: polygon(100% 68%, 0 100%, 100% 100%);
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 .homeHeading {
@@ -149,5 +149,21 @@
 
   .productCard img[alt] {
     font-size: 0.5rem;
+  }
+}
+
+.repiterDiv {
+  background-image: url("https://res.cloudinary.com/djcbwaqfj/image/upload/v1705605048/qreghmklod4thfta11ol.png");
+  background-size: cover; /* התמונה תכסה את כל רוחב העמוד */
+  height: 7rem; /* גובה של התמונה */
+  animation: scrollAnimation 60s linear infinite; /* זמן ארכיון של הגלילה */
+}
+
+@keyframes scrollAnimation {
+  from {
+    background-position: 0 0; /* התמונה מתחילה במיקום המקורי */
+  }
+  to {
+    background-position: 100% 0; /* התמונה מגלה לסוף הרוחב של העמוד */
   }
 }
