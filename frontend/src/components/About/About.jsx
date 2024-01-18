@@ -27,17 +27,13 @@ const About = () => {
           </div>
           <div className="about-text">
             <p>
-              Our philosophy We always strive to build trust with everyone and
-              make sure we offer the best service and experience. How many times
-              have you bought something online and you didn’t know what happened
-              after that … Things like “where is my item?” Or “how do I use or
-              configure the product I just received?”, “Why not answer my
-              questions?”, Etc … We know how annoying it is to buy something
-              online and not be able to contact the seller about anything
-              thereafter … Well, this is what it’s all about in JewishShop. We
-              are there for you no matter what, and we will go the extra mile to
-              make your experience with us happy. Yes, whatever you need, just
-              “contact us” and we are here for you.
+              Welcome to "Oy Vey Delights" – where Judaica meets a sprinkle of schmaltz! We're not your average online store; we're the mishmash of Jewish joy you never knew you needed.
+
+              From "Mazel Tov Mishloach Manot" for celebrating life's victories to "Chuppah Chic" for weddings that wow, we've got it all. Our "Kosher Kitsch" is your go-to for quirky Jewish decor, and "Meshuggeneh Mugs" bring a dose of humor to your morning brew.
+
+              For the little ones, our "Kinder Corner" has kosher baby gear that's downright adorable. Because let's face it, even the tiniest mensches deserve a touch of Jewish style.
+
+              So, dive into our virtual mishpocha and let the Oy Vey adventures begin. Why settle for regular retail when you can shop with a side of Jewish humor? Explore, click, and Mazel Tov – you just found your new favorite online shopping haven!
             </p>
             <p>
               Our objective We ensure that all of our orders are shipped within

@@ -1,31 +1,31 @@
-import './Products.css';
-import { useEffect, Fragment, useState } from 'react';
-import Loader from '../Loader/Loader';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllProductsAction } from '../../redux/actions/productAction';
-import { clearErrorAction } from '../../redux/actions/appAction';
-import ProductCard from './ProductCard';
-import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify'; // Import toast from react-toastify
-import 'react-toastify/dist/ReactToastify.css';
-import Pagination from 'react-js-pagination';
-import { Slider, Typography, Rating } from '@mui/material';
-import MetaData from '../layout/MetaData';
+import "./Products.css";
+import { useEffect, Fragment, useState } from "react";
+import Loader from "../Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProductsAction } from "../../redux/actions/productAction";
+import { clearErrorAction } from "../../redux/actions/appAction";
+import ProductCard from "./ProductCard";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify"; // Import toast from react-toastify
+import "react-toastify/dist/ReactToastify.css";
+import Pagination from "react-js-pagination";
+import { Slider, Typography, Rating } from "@mui/material";
+import MetaData from "../layout/MetaData";
 
 const categoryList = [
-  'All',
-  'Laptop',
-  'PC',
-  'Mobile',
-  'Accessories',
-  'Games',
-  'Others',
+  "All",
+  "Kosher Mezuzah Scrolls",
+  "Shofars",
+  "Shabbat Candlesticks",
+  "Tallit & Tallit Bags",
+  "Jewish Books",
+  "Others",
 ];
 
 const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [priceRange, setPriceRange] = useState([0, 1000000]);
-  const [category, setCategory] = useState('All');
+  const [category, setCategory] = useState("All");
   const [rating, setRating] = useState(null);
 
   const dispatch = useDispatch();
@@ -112,7 +112,7 @@ const Products = () => {
             <li
               key={c}
               className={
-                category === c ? 'category-link active' : 'category-link'
+                category === c ? "category-link active" : "category-link"
               }
               onClick={() => {
                 setCategory(c);

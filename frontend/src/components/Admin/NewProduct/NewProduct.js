@@ -1,7 +1,7 @@
-import './NewProduct.css';
-import { Fragment, useEffect, useState } from 'react';
-import MetaData from '../../layout/MetaData';
-import SideBar from '../SideBar/SideBar';
+import "./NewProduct.css";
+import { Fragment, useEffect, useState } from "react";
+import MetaData from "../../layout/MetaData";
+import SideBar from "../SideBar/SideBar";
 import {
   AccountTree,
   AttachMoney,
@@ -9,19 +9,19 @@ import {
   Image,
   Spellcheck,
   Storage,
-} from '@mui/icons-material';
-import { Button } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+} from "@mui/icons-material";
+import { Button } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   clearCreateProductStatusAction,
   createNewProductAction,
-} from '../../../redux/actions/productAction';
-import { clearErrorAction } from '../../../redux/actions/appAction';
-import Loader from '../../Loader/Loader';
-import productSlice from '../../../redux/slices/productSlice';
+} from "../../../redux/actions/productAction";
+import { clearErrorAction } from "../../../redux/actions/appAction";
+import Loader from "../../Loader/Loader";
+import productSlice from "../../../redux/slices/productSlice";
 
 const NewProduct = () => {
   const dispatch = useDispatch();
@@ -32,21 +32,21 @@ const NewProduct = () => {
   const navigate = useNavigate();
   const { setProductLoader } = productSlice.actions;
 
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
-  const [stock, setStock] = useState('');
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
+  const [stock, setStock] = useState("");
   const [images, setImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    'Laptop',
-    'PC',
-    'Mobile',
-    'Accessories',
-    'Games',
-    'Others',
+    "Kosher Mezuzah Scrolls",
+    "Shofars",
+    "Shabbat Candlesticks",
+    "Tallit & Tallit Bags",
+    "Jewish Books",
+    "Others",
   ];
 
   if (error) {
@@ -56,8 +56,8 @@ const NewProduct = () => {
 
   useEffect(() => {
     if (createProductSuccess) {
-      toast.success('New Product Created Successfully.');
-      navigate('/admin/dashboard');
+      toast.success("New Product Created Successfully.");
+      navigate("/admin/dashboard");
       dispatch(clearCreateProductStatusAction());
       dispatch(setProductLoader(true));
     } else {
@@ -177,7 +177,7 @@ const NewProduct = () => {
                 ))}
               </div>
               <Button className="newproduct-btn" type="submit">
-                {' '}
+                {" "}
                 Create Product
               </Button>
             </form>
