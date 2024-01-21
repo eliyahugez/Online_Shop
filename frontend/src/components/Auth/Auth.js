@@ -1,34 +1,34 @@
-import './Auth.css';
-import { Fragment, useEffect, useRef, useState } from 'react';
-import { clearErrorAction } from '../../redux/actions/appAction';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import AvatarPreview from '../../images/Profile.png';
-import { useDispatch, useSelector } from 'react-redux';
+import "./Auth.css";
+import { Fragment, useEffect, useRef, useState } from "react";
+import { clearErrorAction } from "../../redux/actions/appAction";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import AvatarPreview from "../../images/Profile.png";
+import { useDispatch, useSelector } from "react-redux";
 import {
   loginAction,
   registerAction,
   resetForgotPasswordStatusAction,
-} from '../../redux/actions/userAction';
-import { toast } from 'react-toastify'; // Import toast from react-toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for react-toastify
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
-import Loader from '../Loader/Loader';
-import MetaData from '../layout/MetaData';
+} from "../../redux/actions/userAction";
+import { toast } from "react-toastify"; // Import toast from react-toastify
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import Loader from "../Loader/Loader";
+import MetaData from "../layout/MetaData";
 
 const LogIn = () => {
-  const [loginEmail, setLoginEmail] = useState('');
-  const [loginPassword, setLoginPassword] = useState('');
-  const [authType, setAuthType] = useState('Login');
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [authType, setAuthType] = useState("Login");
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
   const { name, email, password, confirmPassword } = user;
-  const [avatar, setAvatar] = useState('');
+  const [avatar, setAvatar] = useState("");
   const [avatarPrev, setAvatarPrev] = useState(AvatarPreview);
 
   const dispatch = useDispatch();
@@ -44,8 +44,8 @@ const LogIn = () => {
 
   useEffect(() => {
     const redirect = location.search
-      ? `/${location.search.split('=')[1]}`
-      : '/account';
+      ? `/${location.search.split("=")[1]}`
+      : "/account";
     if (isAuthenticated) {
       navigate(redirect);
     }
@@ -67,7 +67,7 @@ const LogIn = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      return toast.error('Password does not match'); // Use toast.error instead of alert.error
+      return toast.error("Password does not match"); // Use toast.error instead of alert.error
     }
 
     const userInfo = {
@@ -81,7 +81,7 @@ const LogIn = () => {
   };
 
   const registerFormChange = (e) => {
-    if (e.target.name === 'avatar') {
+    if (e.target.name === "avatar") {
       const reader = new FileReader();
       reader.readAsDataURL(e.target.files[0]);
 
@@ -98,22 +98,22 @@ const LogIn = () => {
   };
 
   const switchAuthType = (e, type) => {
-    if (type === 'login') {
-      e.target.nextElementSibling.classList.remove('active');
-      e.target.classList.add('active');
+    if (type === "login") {
+      e.target.nextElementSibling.classList.remove("active");
+      e.target.classList.add("active");
 
-      loginRef.current.classList.add('active');
-      registerRef.current.classList.remove('active');
-      setAuthType('Login');
+      loginRef.current.classList.add("active");
+      registerRef.current.classList.remove("active");
+      setAuthType("Login");
     }
 
-    if (type === 'register') {
-      e.target.previousElementSibling.classList.remove('active');
-      e.target.classList.add('active');
+    if (type === "register") {
+      e.target.previousElementSibling.classList.remove("active");
+      e.target.classList.add("active");
 
-      registerRef.current.classList.add('active');
-      loginRef.current.classList.remove('active');
-      setAuthType('Register');
+      registerRef.current.classList.add("active");
+      loginRef.current.classList.remove("active");
+      setAuthType("Register");
     }
   };
 
@@ -129,13 +129,13 @@ const LogIn = () => {
               <div className="auth-toggle">
                 <p
                   className="login-heading active"
-                  onClick={(e) => switchAuthType(e, 'login')}
+                  onClick={(e) => switchAuthType(e, "login")}
                 >
                   LOGIN
                 </p>
                 <p
                   className="register-heading"
-                  onClick={(e) => switchAuthType(e, 'register')}
+                  onClick={(e) => switchAuthType(e, "register")}
                 >
                   REGISTER
                 </p>
